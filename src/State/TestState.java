@@ -1,10 +1,10 @@
 package State;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-@SuppressWarnings("serial")
-public class TestState extends Frame implements ActionListener {
+public class TestState extends JFrame implements ActionListener {
     // GUI attributes.
     private Button pushButton = new Button("Push Operation");
     private Button pullButton = new Button("Pull Operation");
@@ -12,7 +12,7 @@ public class TestState extends Frame implements ActionListener {
     private TextArea textArea = new TextArea();
 
     // The Context.
-    private Context context = null;
+    private Context context;
 
     public TestState() {
         super("Welcome to BouarfaDahchour State Pattern");
@@ -36,6 +36,7 @@ public class TestState extends Frame implements ActionListener {
         pushButton.addActionListener(this);
         pullButton.addActionListener(this);
         exitButton.addActionListener(this);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     // Handle GUI actions.

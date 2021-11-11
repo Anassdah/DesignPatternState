@@ -1,9 +1,8 @@
 package AntiState;
 
 import java.awt.*;
-import java.awt.event.ActionListener;
 
-public class ContextNoSP {private Color state = null;
+public class ContextNoSP {private Color state;
     public ContextNoSP(Color color) {state = color;}
     public ContextNoSP() {this(Color.red);}
     public Color getState() {return state;}
